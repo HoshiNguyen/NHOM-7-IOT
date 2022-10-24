@@ -1,0 +1,154 @@
+
+<html lang="en">
+<head>
+  <title>Giai phuong trinh bac 1, 2 - nhóm 07</title>
+  <style>
+    video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol,
+    ul {
+      list-style: none;
+    }
+    blockquote,
+    q {
+      quotes: none;
+    }
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    h1 {
+      margin: 10px;
+      font-size: 35px;
+      padding: 10px;
+      color: rgb(8, 19, 145);
+      font-weight: bold;
+    }
+
+    p {
+      color: red;
+      margin: 5px 0px 15px 0px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    #solveBtnBac1,
+    #solveBtnBac2 {
+      padding: 4px;
+      color: black;
+    }
+
+    #result {
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body style="text-align: center; font-size: 20px; background-color: rgb(71, 204, 195);">
+  <h1>Giải phương trình bậc 1, 2 - Nhóm 07</h1>
+  <form>
+    Nhập số a: <input type="text" id="a" value="" /> <br>
+    Nhập số b: <input type="text" id="b" value="" /> <br>
+    Nhập số c: <input type="text" id="c" value="" /> <br><br>
+    <input type="button" id="solveBtnBac1" value="Tìm nghiệm PT bậc 1: ax + b = 0" /><br>
+    <p>*Khi giải phương trình bậc 1, số c sẽ bị bỏ qua!</p>
+    <input type="button" id="solveBtnBac2" value="Tìm nghiệm PT bậc 2: ax2 + bx + c = 0" /><br><br>
+    <span id="result"></span> <br><br>
+  </form>
+
+  <script>
+    var buttonBac1=document.getElementById('solveBtnBac1');
+    solveBtnBac1.onclick=function() {
+      let tmp_a=document.getElementById('a').value;
+      let tmp_b=document.getElementById('b').value;
+
+      if((tmp_a==""||tmp_b=="")||(isNaN(tmp_a)||isNaN(tmp_b))) {
+        alert("Vui lòng nhập số a và b, bỏ qua số c!");
+      }
+      else {
+        tmp_a=Number(tmp_a);
+        tmp_b=Number(tmp_b);
+        giai_pt_bac_1(tmp_a,tmp_b);
+      }
+    }
+
+    var buttonBac2=document.getElementById('solveBtnBac2');
+    solveBtnBac2.onclick=function() {
+      let tmp_a=document.getElementById('a').value;
+      let tmp_b=document.getElementById('b').value;
+      let tmp_c=document.getElementById('c').value;
+
+      if((tmp_a==""||tmp_b==""||tmp_c=="")||(isNaN(tmp_a)||isNaN(tmp_b)||isNaN(tmp_c))) {
+        alert("Vui lòng nhập số!");
+      }
+      else {
+        tmp_a=Number(tmp_a);
+        tmp_b=Number(tmp_b);
+        tmp_c=Number(tmp_c);
+        giai_pt_bac_2(tmp_a,tmp_b,tmp_c);
+      }
+    }
+
+    function giai_pt_bac_1(a,b) {
+      var result=document.getElementById("result");
+      if(a==0&&b==0) {
+        alert('Phương trình bậc 1 vô số nghiệm');
+        result.innerHTML='Phương trình bậc 1 vô số nghiệm';
+      }
+      else if(a!=0&&b==0) {
+        alert('Phương trình bậc 1 có nghiệm x = 0');
+        result.innerHTML='Phương trình bậc 1 có nghiệm x = 0';
+      }
+      else if(a==0&&b!=0) {
+        alert("Phương trình bậc 1 vô nghiệm");
+        result.innerHTML="Phương trình bậc 1 vô nghiệm";
+      }
+      else {
+        alert('Phương trình bậc 1 có nghiệm x = '+(-b/a));
+        result.innerHTML='Phương trình bậc 1 có nghiệm x = '+(-b/a);
+      }
+    }
+
+    function giai_pt_bac_2(a,b,c) {
+      var result=document.getElementById("result");
+      var delta,x1,x2;
+      delta=(b*b-4*a*c);
+      if(delta==0) {
+        alert("Phuơng trình bậc 2 có nghiệm kép");
+        x1=-b/(2*a);
+        result.innerHTML='Phương trình bậc 2 có nghiệm kép: '+'<br>x1 = x2 = '+x1;
+      }
+      else if(delta<0) {
+        alert("Phương trình bậc 2 vô nghiệm");
+        result.innerHTML="Phương trình bậc 2 vô nghiệm";
+      }
+      else {
+        alert("Phương trình bậc 2 có 2 nghiệm");
+        x1=(-b-Math.sqrt(delta))/(2*a);
+        x2=(-b+Math.sqrt(delta))/(2*a);
+        result.innerHTML='Phương trình bậc 2 có 2 nghiệm:'+'<br>x1 = '+x1+'<br>   x2 = '+x2;
+      }
+    }
+  </script>
+</body>
+
+</html>

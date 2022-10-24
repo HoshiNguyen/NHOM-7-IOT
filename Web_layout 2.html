@@ -1,0 +1,84 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div style="justify-content: center;
+		display: grid;
+		grid-template-columns: auto;">
+		Số hạng 1:
+		<input type="input" id="inp1"
+			//onchange="update_value()"
+			placeholder="0"
+			value="0">
+		Số hạng 2:
+		<input type="input" id="inp2"
+			//onchange="update_value()"
+			placeholder="0"
+			value="0">
+		<p id="kq">Kết quả là: </p>
+		<input type="button" value="Cộng" onclick="Cong()">
+		<input type="button" value="Trừ" onclick="Tru()">
+		<input type="button" value="Nhân" onclick="Nhan()">
+		<input type="button" value="Chia" onclick="Chia()">
+	</div>
+		<script type="text/javascript">
+			function Cong(){
+				const tmp_inp1 = document.getElementById("inp1").value;
+				const tmp_inp2 = document.getElementById("inp2").value;
+				const kq = document.getElementById("kq");
+				if (isNaN(parseInt(tmp_inp1))||isNaN(parseInt(tmp_inp1))){
+					alert("Vui lòng nhập một số");
+				}else{
+					//console.log("Vừa nhập: "+parseInt(tmp_inp2));
+				tong = parseInt(tmp_inp1) + parseInt(tmp_inp2);
+				console.log(tong);
+				//Hiển thị ra vị trí kết quả:
+				kq.innerHTML = "Kết quả là: " + tong;
+				}
+			}
+			function Tru(){
+				const tmp_inp1 = document.getElementById("inp1").value;
+				const tmp_inp2 = document.getElementById("inp2").value;
+				const kq = document.getElementById("kq");
+				if (isNaN(parseInt(tmp_inp1))||isNaN(parseInt(tmp_inp1))){
+					alert("Vui lòng nhập một số");
+				}else{
+					//console.log("Vừa nhập: "+parseInt(tmp_inp2));
+				hieu = parseInt(tmp_inp1) - parseInt(tmp_inp2);
+				console.log(hieu);
+				//Hiển thị ra vị trí kết quả:
+				kq.innerHTML = "Kết quả là: " + hieu;
+				}
+			}
+			function Nhan(){
+				const tmp_inp1 = document.getElementById("inp1").value;
+				const tmp_inp2 = document.getElementById("inp2").value;
+				const kq = document.getElementById("kq");
+				if (isNaN(parseInt(tmp_inp1))||isNaN(parseInt(tmp_inp1))){
+					alert("Vui lòng nhập một số");
+				}else{
+					//console.log("Vừa nhập: "+parseInt(tmp_inp2));
+				tich = parseInt(tmp_inp1) * parseInt(tmp_inp2);
+				console.log(tich);
+				//Hiển thị ra vị trí kết quả:
+				kq.innerHTML = "Kết quả là: " + tich;
+				}
+			}	
+			function Chia(){
+				const tmp_inp1 = document.getElementById("inp1").value;
+				const tmp_inp2 = document.getElementById("inp2").value;
+				const kq = document.getElementById("kq");
+				if (isNaN(parseInt(tmp_inp1))||isNaN(parseInt(tmp_inp1))){
+					alert("Vui lòng nhập một số");
+				}else{
+					//console.log("Vừa nhập: "+parseInt(tmp_inp2));
+				thuong = parseInt(tmp_inp1) / parseInt(tmp_inp2);
+				console.log(thuong);
+				//Hiển thị ra vị trí kết quả:
+				kq.innerHTML = "Kết quả là: " + thuong;
+				}
+			}		
+		</script>
+</body>
+</html>
