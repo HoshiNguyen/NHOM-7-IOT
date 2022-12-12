@@ -8,39 +8,47 @@
   box-sizing: border-box;
 }
 body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-size: cover;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-size: cover;
 }
 .header {
-    margin-top: 20px;
-    margin-bottom: -15px;
-    text-align: center;
+  margin-top: 5px;
+  margin-bottom: -30px;
+  text-align: center;
+  background: rgb(14, 39, 90);
+  width: 100%;
 }
 .header h1{
-  color: rgb(5, 34, 65);
+  color: #fff;
   font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  padding-bottom: 10px;
 }
 .header h2{
-  color: rgb(5, 34, 65);
-  font-size: 25px;
+  padding-top: 15px;
+  padding-bottom: -50px;
+  color: #fff;
+  font-size: 30px;
   font-family: "Roboto", sans-serif;
 }
 .topnav {
-    overflow: hidden;
-    background-color: rgb(5, 34, 65);
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(223, 231, 245);
 }
 .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 12px 12px;
-    text-decoration: none;
+  float: left;
+  display: block;
+  color: rgb(5, 34, 65);
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
 }
 .topnav a:hover {
-    color: rgb(255, 255, 0);
+  color: rgb(255, 255, 0);
+  background-color: rgb(14, 39, 90);
 }
 .column{
   float: left;
@@ -56,6 +64,17 @@ body{
   margin: 0;
   padding: 1rem;
   width: 32rem;
+}
+
+.container h2{
+  color: rgb(5, 34, 65);
+  font-family: "Roboto", sans-serif;
+}
+
+.container h3{
+  color: rgb(138, 0, 0);
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
 }
 
 .accordion .accordion-item {
@@ -157,7 +176,7 @@ body{
   font-family: "Calibri(body)",sans-serif;
   margin: 1em 0;
 }
-.accordion .accordion-content ul {
+.accordion .accordion-content ul li {
   font-size: 1.1rem;
   font-weight: 300;
   font-family: "Calibri(body)",sans-serif;
@@ -171,12 +190,9 @@ body{
   display: table;
   clear: both;
 }
-@media screen and (max-width: 600px) {
-  .column.left  {
+@media screen and (max-width: 1280px) {
+  .column.left .column.right {
     width: 100%;
-  }
-  .column.right {
-    width: 70%;
   }
 }
 .p{
@@ -406,7 +422,7 @@ body{
   }
 }
 .footer {
-  background-color: rgb(5, 34, 65);
+  background-color: rgb(14, 39, 90);
   padding: 0.1px;
   text-align: right;
   color: white;
@@ -422,7 +438,7 @@ body{
 }
 .box img{
     margin-left: 15px;
-    margin-top: -12px;
+    margin-top: 12px;
     z-index: 99;
     height: 100px;
     width: 100px;

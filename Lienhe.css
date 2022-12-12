@@ -8,40 +8,48 @@ body{
     background-size: cover;
 }
 .header {
-    margin-top: 20px;
-    margin-bottom: -15px;
-    text-align: center;
+  margin-bottom: -30px;
+  margin-top: 5px;
+  text-align: center;
+  background: rgb(14, 39, 90);
+  width: 100%;
 }
 .header h1{
-  color: rgb(5, 34, 65);
+  color: #fff;
   font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  padding-bottom: 10px;
 }
 .header h2{
-    color: rgb(5, 34, 65);
-    font-size: 25px;
-    font-family: "Roboto", sans-serif;
+  padding-top: 15px;
+  padding-bottom: -50px;
+  color: #fff;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
 }
 .topnav {
-    overflow: hidden;
-    background-color: rgb(5, 34, 65);
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(223, 231, 245);
 }
 .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  float: left;
+  display: block;
+  color: rgb(5, 34, 65);
+  text-align: center;
+  padding: 12px 12px;
+  text-decoration: none;
 }
 .topnav a:hover {
-    color: rgb(255, 255, 0);
+  color: rgb(255, 255, 0);
+  background-color: rgb(14, 39, 90);
 }
 .column{
     display: flex;
     align-items: center;
     float: right;
     position: absolute;
-    top: 28%;
+    top: 29%;
     left: 23%;
 }
 .p{
@@ -160,7 +168,7 @@ body{
 }
 .box img{
     margin-left: 15px;
-    margin-top: -12px;
+    margin-top: 12px;
     z-index: 99;
     height: 100px;
     width: 100px;
