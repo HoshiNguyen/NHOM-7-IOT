@@ -41,8 +41,8 @@ body{
   text-decoration: none;
 }
 .topnav a:hover {
-  color: rgb(255, 255, 0);
-  background-color: rgb(14, 39, 90);
+  color: rgb(5, 34, 65);
+  font-weight: bold;
 }
 .column{
     display: flex;
